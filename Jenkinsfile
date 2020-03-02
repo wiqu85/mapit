@@ -28,7 +28,7 @@ pipeline {
       steps {
         script {
           openshift.withCluster() {
-            openshift.selector("bc", "mapit").startBuild("--from-file=target/*.jar", "--wait")
+            openshift.selector("bc", "mapit").startBuild("--from-file=target/mapit-spring.jar", "--wait")
           }
         }
       }
