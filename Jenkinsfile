@@ -19,7 +19,7 @@ pipeline {
       steps {
         script {
           openshift.withCluster() {
-            openshift.newBuild("--name=mapit", "--image-stream=adoptopenjdk/openjdk8", "--binary")
+            openshift.newBuild("--name=mapit", "--image-stream=registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift", "--binary")
           }
         }
       }
